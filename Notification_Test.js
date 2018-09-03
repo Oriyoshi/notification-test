@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 	if("Notification" in window){
-		const permission = Notification.permission;
+		var permission = Notification.permission;
 		
 		console.log(permission);
 		//すでに承認または拒否されていたら何も返さない
