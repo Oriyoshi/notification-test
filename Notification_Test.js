@@ -13,6 +13,7 @@
 		Notification
 		.requestPermission()
 		.then(function() {
+			console.log("Notification.then Done.");
 			var notification = new Notification("Hellow,World!!");
 		});
 	}
