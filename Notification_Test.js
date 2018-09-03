@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 	if("Notification" in window){
-		var permission = Notification.permission;
+		const permission = Notification.permission;
 		
 		console.log(permission);
 		//すでに承認または拒否されていたら何も返さない
@@ -10,11 +10,10 @@
 		}
 		
 		//以前に許可のリクエストをしていなければここでユーザーに許可を求める
-		Notification
-		.requestPermission()
-		.then(function() {
-			console.log("Notification.then Done.");
-			var notification = new Notification("Hellow,World!!");
-		});
+		Notification.requestPermission();
+		
+		if(permission === "granted"){
+			const notification = new Notification("Hellow,World!!");
+		}
 	}
 })();
