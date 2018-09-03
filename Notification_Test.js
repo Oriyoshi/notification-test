@@ -11,9 +11,9 @@
 		
 		//以前に許可のリクエストをしていなければここでユーザーに許可を求める
 		Notification
-			.requestPermission()
+		.requestPermission()
 		.then(function() {
-			const notification = new Notification("Hellow,World!!");
+			var notification = new Notification("Hellow,World!!");
 		});
 	}
 })();
